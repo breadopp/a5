@@ -1,0 +1,21 @@
+import React, { useState } from 'react';
+import { Button, Card, CardContent, Typography } from '@mui/material';
+function App() {
+const [showCard, setShowCard] = useState(false);
+return (
+ <div style={{ padding: '20px' }}>
+ <Button variant="outlined" onClick={() => setShowCard(!showCard)}>
+ Toggle Card
+ </Button>
+ {showCard && (
+ <Card style={{ marginTop: '20px' }}>
+ <CardContent>
+ <Typography variant="h5">Material UI Card</Typography>
+ <Typography>This is a simple card.</Typography>
+ </CardContent>
+ </Card>
+ )}
+ </div>
+);
+}
+export default App;
